@@ -238,6 +238,29 @@ Use this if you want:
 - Jupyter
 - a cell-by-cell training workflow
 
+How to open it:
+
+- VS Code / Jupyter:
+  - open the repository folder in VS Code
+  - open `notebooks/train_chess_yolo.ipynb`
+  - select a Python kernel
+  - run the cells from top to bottom
+- Colab:
+  - upload `notebooks/train_chess_yolo.ipynb` to Colab
+  - upload or mount the project files so `chess-pieces.ndjson` is available
+  - run the cells in order
+- Kaggle:
+  - create a new notebook
+  - upload the notebook or copy its cells
+  - make sure `chess-pieces.ndjson` is available in the notebook environment
+  - run the cells in order
+
+Important for notebook usage:
+
+- the notebook is for training and validation
+- the Streamlit app is not meant to run inside the notebook
+- the notebook expects `chess-pieces.ndjson` to be present before dataset preparation starts
+
 ### 2. Terminal/local workflow
 
 Use the Python scripts directly:
