@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+runs/
+.streamlit/
+yolo11n.pt
+yolo11s.pt
+yolo26n.pt
