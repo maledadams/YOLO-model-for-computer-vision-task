@@ -133,7 +133,7 @@ def main() -> None:
             write_label_file(label_path, boxes)
             processed += 1
             counts[f"saved_{split}"] += 1
-        except Exception as exc:  # pragma: no cover - best effort download path
+        except Exception as exc: 
             failures.append(f"{row['file']}: {exc}")
             counts["failed"] += 1
 

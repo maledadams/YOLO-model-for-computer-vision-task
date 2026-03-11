@@ -186,7 +186,7 @@ def consolidate_board_detections(
     detections: list[DetectionRow],
     max_pieces: int = 32,
 ) -> list[DetectionRow]:
-    # A legal board square can only hold one visible piece, so keep the strongest hit per square.
+    
     by_square: dict[str, DetectionRow] = {}
     for detection in detections:
         existing = by_square.get(detection.square)
@@ -243,7 +243,6 @@ def draw_highlights(
     squares = set(normalize_squares(selected_squares))
     filtered = [d for d in detections if detection_matches(d, families, sides, squares)]
 
-    # White square outline stays visible even when no piece matches the square.
     for square in normalize_squares(selected_squares):
         x1, y1, x2, y2 = square_bounds(
             width,
